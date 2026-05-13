@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Keamanan SDIT Daarul Hasanah</title>
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,122 +11,118 @@
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-<div class="logo-area">
 
-  <img
-    src="img/CORPORSTION.png"
-    alt="Logo"
-    class="logo">
-
-  <h2>KEAMANAN SDIT DAARUL HASANAH</h2>
-
-</div>
-  <button onclick="showMenu('portofolio')">
-  Portofolio
-</button>
-
-    <button onclick="showMenu('suratIzinKeluar')">
-      Surat Izin Keluar
-    </button>
-
-  <button onclick="showMenu('insidenSekolah')">
-  Insiden Sekolah
-  </button>
-    
-</div>
-<!-- CONTENT -->
-
-<div class="content">
-
-  <!-- PORTOFOLIO -->
-<div id="portofolio" class="menu">
-
-  <div class="sambutan-box">
-
-    <img
-      src="img/CORPORSTION.png"
-      alt="Logo"
-      class="sambutan-logo">
-
-    <h3>Selamat Datang</h3>
-
-    <p>
-      Selamat datang di sistem administrasi keamanan SDIT Daarul Hasanah.
-      Website ini dibuat untuk mempermudah
-      pengelolaan surat izin keluar dan insiden di SDIT Daarul Hasanah
-      secara digital, cepat, dan efisien.
-    </p>
-
-    <p>
-      Semoga website ini dapat membantu
-      pelayanan administrasi menjadi lebih
-      baik dan modern.
-    </p>
-
+  <div class="logo-area">
+    <img src="img/CORPORSTION.png" class="logo">
+    <h2>KEAMANAN SDIT DAARUL HASANAH</h2>
   </div>
 
+  <button onclick="showMenu('portofolio')">Portofolio</button>
+  <button onclick="showMenu('suratIzinKeluar')">Surat Izin Keluar</button>
+  <button onclick="showMenu('insidenSekolah')">Insiden Sekolah</button>
+
 </div>
 
-  <!-- SURAT IZIN KELUAR -->
+<!-- CONTENT -->
+<div class="content">
+
+<!-- PORTOFOLIO -->
+<div id="portofolio" class="menu active">
+  <div class="sambutan-box">
+    <img src="img/CORPORSTION.png" class="sambutan-logo">
+    <h3>Selamat Datang</h3>
+    <p>Sistem administrasi keamanan SDIT Daarul Hasanah.</p>
+  </div>
+</div>
+
+<!-- SURAT IZIN -->
 <div id="suratIzinKeluar" class="menu">
+
   <h2>Surat Izin Keluar</h2>
 
-  <!-- FORM INPUT SURAT IZIN -->
-  <form 
-    action="https://script.google.com/macros/s/AKfycbwwqphWV48DUCw8M_g02HZFa9XAdIFnFTmftoKfIi699olRUi2GHkjOCqOBKA-PzqI/exec" 
-    method="POST" 
-    target="_blank"
-  >
+  <form action="https://script.google.com/macros/s/AKfycbwwqphWV48DUCw8M_g02HZFa9XAdIFnFTmftoKfIi699olRUi2GHkjOCqOBKA-PzqI/exec"
+        method="POST" target="_blank">
+
     <input type="hidden" name="jenis" value="Surat Izin Keluar">
 
-    <input type="date" name="tanggal" placeholder="Tanggal Keluar" required>
-    <input type="time" name="jam" placeholder="Jam Keluar" required>
+    <input type="date" name="tanggal" required>
+    <input type="time" name="jam" required>
     <input type="text" name="nama" placeholder="Nama" required>
     <input type="text" name="jabatan" placeholder="Jabatan" required>
     <textarea name="keperluan" placeholder="Keperluan" required></textarea>
     <input type="text" name="izinOleh" placeholder="Yang Mengizinkan" required>
-    <input type="time" name="jamPulang" placeholder="Jam Pulang" required>
+    <input type="time" name="jamPulang" required>
 
     <button type="submit">Simpan</button>
   </form>
 
   <hr>
 
-  <!-- SEARCH DATA -->
-  <h3>Data Surat Izin Keluar</h3>
-  <input 
-    type="text" 
-    id="searchIzinKeluar" 
-    placeholder="Cari surat izin keluar..." 
-    class="search-box" 
-    onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')"
-  >
+  <h3>Data Surat Izin</h3>
 
-  <!-- TOMBOL EDIT / DOWNLOAD -->
-  <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/edit"
-      target="_blank" class="admin-btn">
-      Edit Data Spreadsheet
-    </a>
-  
-  <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/export?format=xlsx" 
-     target="_blank" 
-     class="download-btn">
-    Download Excel
-  </a>
+  <input type="text" class="search-box"
+         placeholder="Cari..."
+         onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')"
+         id="searchIzinKeluar">
 
-  <!-- IFRAME DATA -->
-  <iframe 
-    id="frameIzinKeluar" 
-    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSPo8u8p6BVElhAvPZzwoDMP2hEgOsw8X9Zghl7TjmKvQpd6ODv7tOwgnJmHHbazC8PWGjoJBxNYC1D/pubhtml?gid=0&single=true" 
-    class="frame">
+  <a class="admin-btn"
+     href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/edit"
+     target="_blank">Edit Spreadsheet</a>
+
+  <a class="download-btn"
+     href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/export?format=xlsx"
+     target="_blank">Download Excel</a>
+
+  <iframe class="frame"
+          id="frameIzinKeluar"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSPo8u8p6BVElhAvPZzwoDMP2hEgOsw8X9Zghl7TjmKvQpd6ODv7tOwgnJmHHbazC8PWGjoJBxNYC1D/pubhtml?gid=0&single=true">
   </iframe>
+
 </div>
-  
+
+<!-- INSIDEN SEKOLAH -->
+<div id="insidenSekolah" class="menu">
+
+  <h2>Insiden Sekolah</h2>
+
+  <form action="https://script.google.com/macros/s/AKfycbyMdiDOkaAo_mqw-CNnvorOmW2aAjjWRwdy0ZnhhDsuLgTgNTc4vxWlUlPJqs5QIyvf/exec"
+        method="POST" target="_blank">
+
+    <input type="date" name="tanggal" required>
+    <input type="time" name="jam" required>
+
+    <input type="text" name="TempatKejadian" placeholder="Tempat Kejadian" required>
+    <textarea name="Deskripsi" placeholder="Deskripsi Insiden" required></textarea>
+
+    <button type="submit">Simpan</button>
+  </form>
+
+  <hr>
+
+  <h3>Data Insiden</h3>
+
+  <input id="searchInsiden"
+         class="search-box"
+         placeholder="Cari insiden..."
+         onkeyup="searchTable('searchInsiden','frameInsiden')">
+
+  <a class="admin-btn"
+     href="https://docs.google.com/spreadsheets/d/1Bx8q8YyhcLU1m09oE004BqtJyuLxqz7pqpk1KxsqASY/edit"
+     target="_blank">Edit Spreadsheet</a>
+
+  <a class="download-btn"
+     href="https://docs.google.com/spreadsheets/d/1Bx8q8YyhcLU1m09oE004BqtJyuLxqz7pqpk1KxsqASY/export?format=xlsx"
+     target="_blank">Download Excel</a>
+
+  <iframe class="frame"
+          id="frameInsiden"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwt7hrRNXW7jNP2uTnF--mwZ_YBrIDGkLght764DpbRTVgq6J2gQqB3JSd3sfIWk-hSk0SL56IcjzV/pubhtml?gid=0&single=true">
+  </iframe>
 
 </div>
 
 </div>
+
 <script src="js/script.js"></script>
-
 </body>
 </html>
