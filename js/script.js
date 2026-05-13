@@ -46,7 +46,7 @@ function searchTable(inputId, frameId){
 window.cekPassword = function(url){
   let pass = prompt("Masukkan password:");
 
-  if(pass === "1234"){
+  if(pass === "123"){
     let tab = window.open(url, "_blank");
 
     if(!tab){
