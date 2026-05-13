@@ -44,3 +44,12 @@ function searchTable(inputId, frameId){
   }
 
 }
+function cekPassword(url){
+  let pass = prompt("Masukkan password:");
+
+  if(pass === "20109420"){
+    window.open(url, "_blank");
+  } else {
+    alert("Password salah!");
+  }
+}
