@@ -70,6 +70,51 @@
 
 </div>
 
+  <div id="insidenSekolah" class="menu">
+
+  <h2>Insiden Sekolah</h2>
+
+  <form action="https://script.google.com/macros/s/AKfycbyMdiDOkaAo_mqw-CNnvorOmW2aAjjWRwdy0ZnhhDsuLgTgNTc4vxWlUlPJqs5QIyvf/exec"
+        method="POST"
+        target="_blank">
+
+    <input type="date" name="tanggal" required>
+    <input type="time" name="jam" required>
+
+    <input type="text" name="TempatKejadian" placeholder="Tempat Kejadian" required>
+
+    <textarea name="Deskripsi" placeholder="Deskripsi Insiden" required></textarea>
+
+    <button type="submit">Simpan</button>
+
+  </form>
+
+  <hr>
+
+  <input type="text"
+         id="searchInsiden"
+         class="search-box"
+         placeholder="Cari insiden..."
+         onkeyup="searchTable('searchInsiden','frameInsiden')">
+
+  <a class="admin-btn"
+     href="https://docs.google.com/spreadsheets/d/1Bx8q8YyhcLU1m09oE004BqtJyuLxqz7pqpk1KxsqASY/edit"
+     target="_blank">Edit</a>
+
+  <a class="download-btn"
+     href="https://docs.google.com/spreadsheets/d/1Bx8q8YyhcLU1m09oE004BqtJyuLxqz7pqpk1KxsqASY/export?format=xlsx"
+     target="_blank">Download</a>
+
+  <iframe
+    id="frameInsiden"
+    class="frame"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwt7hrRNXW7jNP2uTnF--mwZ_YBrIDGkLght764DpbRTVgq6J2gQqB3JSd3sfIWk-hSk0SL56IcjzV/pubhtml?gid=0&single=true">
+  </iframe>
+
+</div>
+
+  
+
   <!-- SURAT IZIN KELUAR -->
 <div id="suratIzinKeluar" class="menu">
   <h2>Surat Izin Keluar</h2>
