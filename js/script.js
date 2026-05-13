@@ -44,3 +44,25 @@ function searchTable(inputId, frameId){
   }
 
 }
+
+
+function searchTable(inputId, frameId){
+  let input = document.getElementById(inputId).value.toLowerCase();
+  let iframe = document.getElementById(frameId);
+
+  try {
+    let doc = iframe.contentWindow.document;
+    let rows = doc.querySelectorAll("table tr");
+
+    rows.forEach((row, i) => {
+      if(i === 0) return;
+      row.style.display =
+        row.innerText.toLowerCase().includes(input)
+        ? ""
+        : "none";
+    });
+
+  } catch(e){
+    console.log("Iframe tidak bisa diakses browser");
+  }
+}
